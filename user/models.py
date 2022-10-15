@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 # Create your models here.
 class Experience(models.Model):
@@ -6,7 +7,7 @@ class Experience(models.Model):
     company = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
     start_date = models.DateField()
-    end_date = models.DateField( null=True, blank=True)
+    end_date = models.DateField( default=datetime.date.today)
     description = models.TextField()
 
     def __str__(self):
@@ -19,4 +20,15 @@ class skills(models.Model):
 
     def __str__(self):
         return self.skill   
+
+
+class Education(models.Model):
+    course = models.CharField(max_length=100)
+    Institution = models.CharField(max_length=100)
+    start_date = models.DateField()
+    end_date = models.DateField( default=datetime.date.today)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.school
 
