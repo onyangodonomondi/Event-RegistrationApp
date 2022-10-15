@@ -1,0 +1,25 @@
+{% extends 'user/base.html' %}
+
+
+
+
+
+            <div class="exp">
+                {% block content %} 
+
+                {% for i in data %}
+                <div>
+                    <h1>{{ i.title }}</h1>
+                    <h2>{{ i.company }}</h2>
+                    <p>{{ i.description }}</p>
+                    </div>
+                    
+
+
+
+
+                {% endfor %}
+
+                {% endblock content %}
+
+            </div>

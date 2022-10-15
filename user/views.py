@@ -1,38 +1,15 @@
 from django.shortcuts import render ,redirect
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib import messages
-from  . forms import UserRegisterForm
+from . import views
+from  .models  import  *
 # Create your views here.
 def index(request):
-    return render(request, 'user/index.html')
+    data= Experience.objects.all()
 
-def login(request):
-    return render(request, 'user/login.html')
-def register(request):
-    if request.method == 'POST':
-        form = UserRegisterForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username=form.cleaned_data.get('username')
-            messages.success(request, f'Account created for {username}!')
-            return redirect('index')
-    else:
-        form=UserRegisterForm()
-    return render(request, 'user/register.html', {'form':form})
-def logout(request):
-    return render(request, 'user/logout.html')
+    return render(request, 'user/index.html',{'data':data})
 
-def profile(request):
-    
-    return render(request, 'user/profile.html')
-def categories(request):
-    return render(request, 'user/categories.html')
+# def experience(request):
+#     data= Experience.objects.all()
+#     print(data)
+#     return render(request, 'user/index.html' , {'data':data})
 
-def resources(request):
-    return render(request, 'user/resources.html')
-def contact(request):
-    return render(request, 'user/contact.html')
-    
-
-    
 
