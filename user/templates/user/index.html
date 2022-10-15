@@ -293,14 +293,13 @@
                                     <li class="d_timeline-item">
                                         
                                     </li>
+                                    {% for i in data1 %}
                                     <li class="d_timeline-item">
-                                        <h3 class="d_timeline-title">2004 - 2008</h3>
-                                        <p class="d_timeline-text"><span class="d_title">Bachelor of Arts</span><span class="d_company">University of London</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempora perferendis vero officia enim impedit voluptatem dignissimos, veniam ratione est alias rerum aperiam, nam aliquam reprehenderit iste dolor.</p>
+                                        <h3 class="d_timeline-title">{{i.start_date}} -- {{i.end_date}}</h3>
+                                        <p class="d_timeline-text"><span class="d_title">{{i.course}}</span><span class="d_company">{{i.institution}}</span>{{i.description}}</p>
                                     </li>
-                                    <li class="d_timeline-item">
-                                        <h3 class="d_timeline-title">2006 - 2004</h3>
-                                        <p class="d_timeline-text"><span class="d_title">Artist of College</span><span class="d_company">University of Sydney</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempora perferendis vero officia enim impedit voluptatem dignissimos, veniam ratione est alias rerum aperiam, nam aliquam reprehenderit iste dolor.</p>
-                                    </li>
+                                    {% endfor %}
+                                    
                                 </ul>
                             </div>
                         </div>

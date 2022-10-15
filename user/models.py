@@ -24,11 +24,11 @@ class skills(models.Model):
 
 class Education(models.Model):
     course = models.CharField(max_length=100)
-    Institution = models.CharField(max_length=100)
+    institution = models.CharField(max_length=100)
     start_date = models.DateField()
     end_date = models.DateField( default=datetime.date.today)
     description = models.TextField()
 
     def __str__(self):
-        return self.school
+        return self.course
 
