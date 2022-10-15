@@ -5,6 +5,7 @@ from  .models  import  *
 def index(request):
     data= Experience.objects.all()
     data1= Education.objects.all()
+    data2= skills.objects.all()
 
-    return render(request, 'user/index.html',{'data':data,'data1':data1})
+    return render(request, 'user/index.html',{'data':data,'data1':data1, 'data2':data2 })
    

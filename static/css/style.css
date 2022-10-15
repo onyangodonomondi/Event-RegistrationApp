@@ -6923,7 +6923,7 @@ i.font60 {
 }
 
 .circle {
-  display: inline-block;
+  display: -ms-flexbox;
   position: absolute;
   text-align: center;  
   margin-left: auto;
@@ -6933,7 +6933,7 @@ i.font60 {
 }
 
 .circle canvas {
-  vertical-align: middle;
+  vertical-align: auto;
 }
 
 .circle div {
@@ -10673,6 +10673,13 @@ a:hover,
 .dark-scheme .button-close{
     border: 1px solid rgba(255, 255, 255, .5);
 }
+
+.progress-circle-container{
+    display:flex;
+    flex-direction:row;
+    background-color: #009900 !important;
+}
+
 .button-close:before {
   content: "";
   position: absolute;
@@ -18088,6 +18095,12 @@ img {
         top: -21px;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .progressbar {
+     flex-direction:column
+    }
+  }
 
 /*
 #purchase-now, #selector, #back-to-top{

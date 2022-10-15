@@ -15,7 +15,7 @@ class Experience(models.Model):
 
 class skills(models.Model):
     skill = models.CharField(max_length=100)
-    image=models.ImageField(upload_to='images/skills')
+    image=models.ImageField(upload_to='images/skills', null= True, blank = True)
     level = models.IntegerField(null=True, blank=True , default=50)
 
 

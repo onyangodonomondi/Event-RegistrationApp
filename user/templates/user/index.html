@@ -76,18 +76,9 @@
                             <p>I am a website designer from Nairobi, with a strong focus in UI/UX design. I love to get new experiences and always learn from my surroundings. I've done more than 285 projects. You can check it through portfolio section on
                                 this website. I looking forward to any opportunities and challenges. </p>
                         </div>
-                        <div class="spacer-single"></div>
-                        <div class="col-lg-3 position-relative wow fadeIn" data-wow-delay=".2s">
-                            <div class="position-relative">
-                                <div class="progressbar" data-animate="false">
-                                    <div class="circle" data-percent="90">
-                                        <div></div>
-                                    </div>
-                                    <h4>HTML</h4>
-                                </div>
-                            </div>
-                        </div>
-                        
+                    </div>
+
+                </div>      
             </section>
             <section id="section-my-quote" aria-label="section" class="jarallax no-top no-bottom">
                 <div class="de-gradient-edge-top"></div>
@@ -280,33 +271,22 @@
                 <img src="images/background/3.jpg" class="jarallax-img" alt="">
                 <div class="container">
                         <div class="row">
+                            <div class="col-md-12 text-center wow fadeInUp">
+                                <h2>Skills</h2>
+                                <div class="space-border"></div>
+                            </div>
+                           {% for i in data2 %}
                             <div class="col-md-3 wow fadeIn" data-wow-delay="0">
                                 <div class="de_count text-center">
-                                    <h3 class="timer" data-to="8240" data-speed="2500">0</h3>
-                                    <span>Hours of Works</span>
+                                    <h3 class="timer" data-to="{{i.level}}" data-speed="2500">0</h3>
+                                    <span>{{i.skill}}</span>
                                 </div>
                             </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{i.level}}" aria-valuemin="0" aria-valuemax="100" style="width: {{i.level}}%"></div>
+                              </div>
 
-                            <div class="col-md-3 wow fadeIn" data-wow-delay=".25s">
-                                <div class="de_count text-center">
-                                    <h3 class="timer" data-to="315" data-speed="2500">0</h3>
-                                    <span>Projects Done</span>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 wow fadeIn" data-wow-delay=".5s">
-                                <div class="de_count text-center">
-                                    <h3 class="timer" data-to="250" data-speed="2500">0</h3>
-                                    <span>Satisfied Customers</span>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 wow fadeIn" data-wow-delay=".75s">
-                                <div class="de_count text-center">
-                                    <h3 class="timer" data-to="32" data-speed="2500">0</h3>
-                                    <span>Awards Winning</span>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 <div class="de-gradient-edge-bottom"></div>
@@ -442,17 +422,17 @@
                                 <div class="col-md-4">
                                     <div class="wm-1"></div>
                                     <h6>Email Me</h6>
-                                    <p>contact@kyrosnoriaki.com</p>
+                                    <p>donray253@gmail.com</p>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="wm-1"></div>
                                     <h6>Call Me</h6>
-                                    <p>+1 700 333 92 96</p>
+                                    <p>+254 741 590 670</p>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="wm-1"></div>
                                     <h6>Address</h6>
-                                    <p>Collins Street West, Louisiana, Bayerfurt, USA</p>
+                                    <p>Kahawa Wendani Kenya</p>
                                 </div>
                             </div>
                         </div>
