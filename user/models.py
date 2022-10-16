@@ -13,7 +13,7 @@ class Experience(models.Model):
     def __str__(self):
         return self.title
 
-class skills(models.Model):
+class skill(models.Model):
     skill = models.CharField(max_length=100)
     image=models.ImageField(upload_to='images/skills', null= True, blank = True)
     level = models.IntegerField(null=True, blank=True , default=50)
@@ -49,7 +49,7 @@ class portfolio(models.Model):
     def __str__(self):
         return self.title
 
-class Contact(models.Model):
+class Message(models.Model):
     name = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
     phone=models.CharField(max_length=100)

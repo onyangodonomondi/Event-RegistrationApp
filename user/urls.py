@@ -6,7 +6,12 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('index/', views.index, name='experience'),
     path('index/', views.index, name='education'),
-    path('index/', views.index, name='skills'),
+    path('index/', views.index, name='skill'),
+    path('index/', views.index, name='blog'),
+    path('index/', views.index, name='portfolio'),
+    path('index/', views.index, name='message'),
+    
+    
     
   
 ]
