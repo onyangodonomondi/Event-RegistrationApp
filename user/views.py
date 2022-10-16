@@ -24,8 +24,10 @@ def index(request):
     data2= skill.objects.all()
     data3= Blog.objects.all()
     data4= portfolio.objects.all()
+    data5= Activity.objects.all()
 
-    return render(request, 'user/index.html',{'data':data,'data1':data1, 'data2':data2, 'data3':data3, 'data4':data4 ,'form':form, 'submitted':submitted})
+
+    return render(request, 'user/index.html',{'data':data,'data1':data1, 'data2':data2, 'data3':data3, 'data4':data4 ,'form':form, 'submitted':submitted, 'data5':data5})
 
 
    

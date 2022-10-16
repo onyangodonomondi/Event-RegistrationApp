@@ -5,6 +5,8 @@ from .models import skill
 from .models import Blog
 from .models import portfolio
 from .models import Message
+from .models import Activity
+
 
 
 # Register your models here.
@@ -14,4 +16,5 @@ admin.site.register(skill)
 admin.site.register(Blog)
 admin.site.register(portfolio)
 admin.site.register(Message)
+admin.site.register(Activity)
 

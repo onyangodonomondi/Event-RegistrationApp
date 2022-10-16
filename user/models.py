@@ -58,4 +58,12 @@ class Message(models.Model):
     def __str__(self):
         return self.name
 
+class Activity(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    img=models.ImageField(upload_to='images/activity', null= True, blank = True)
+
+    def __str__(self):
+        return self.title
+
     

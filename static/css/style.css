@@ -11654,6 +11654,10 @@ body.dark-scheme::-webkit-scrollbar-thumb,.dark-scheme #de_modal::-webkit-scroll
   position: relative;
   padding: 40px;
 }
+
+.d-inner div{
+    padding: 1rem;
+}
 .de_3d-box h3{
  margin-left: 50px;
  margin-top: 5px;
@@ -15600,7 +15604,7 @@ a.read_more i {
     }
 
     .col-lg-4-5 {
-        width: 80%;
+        width: 100%;
     }
 
     .col-lg-5-5 {
