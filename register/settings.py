@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+v*uswpmfz_#9a1d847=405g-=yopy(k+h-fg8g4q58=ul6sv(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'register.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfolio',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'hoax',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'PASSWORD': 'fk7onGvTg3wKpg9iqiSa',
+        'HOST': 'containers-us-west-108.railway.app',
+        'PORT': '7965',
     }
 }
 
@@ -126,12 +126,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
