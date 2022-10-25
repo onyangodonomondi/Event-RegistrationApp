@@ -8,11 +8,10 @@ urlpatterns = [
     path('index/', views.index, name='education'),
     path('index/', views.index, name='skill'),
     path('index/', views.index, name='blog'),
-    path('index/', views.index, name='portfolio'),
+    
     path('index/', views.index, name='message'),
     path('index/', views.index, name='activity'),
-    
-    
+    path('index/', views.index, name='portfolio'),
     
   
 ]
